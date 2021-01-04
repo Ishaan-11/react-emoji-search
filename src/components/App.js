@@ -1,9 +1,18 @@
 import React from "react";
 import Header from "./Header";
+import SearchInput from "./SearchInput";
 
 function App() {
+
+  function handleSearchChange(event) {
+    console.log(event.target.value);
+  }
+
   return(
-    <Header />
+    <div>
+      <Header />
+      <SearchInput textChange={handleSearchChange}/>
+    </div>
   );
 }
 
