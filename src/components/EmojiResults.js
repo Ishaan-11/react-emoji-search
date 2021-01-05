@@ -6,10 +6,8 @@ function EmojiResults(props) {
 
   useEffect(() => {
     let clipboard = new Clipboard(".copy-to-clipboard");
-    console.log("mount");
 
     return function cleanup() {
-      console.log("unmount");
       clipboard.destroy();
     };
   });
